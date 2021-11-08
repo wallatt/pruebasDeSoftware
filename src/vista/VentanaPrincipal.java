@@ -154,6 +154,7 @@ public class VentanaPrincipal {
 		return btnDetener;
 	}
 
+	//devuelve el boton con la accion de iniciar el juego, y setea su posicion en pantalla
 	private JButton addBotonIniciar() {
 		JButton btnIniciar = new JButton("Iniciar");
 		btnIniciar.addActionListener(new ActionListener() {
