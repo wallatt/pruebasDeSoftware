@@ -4,8 +4,6 @@ import avion.AvionSimple;
 import org.junit.Before;
 import org.junit.Test;
 import avion.Avion;
-import copControl.Mapa;
-import copControl.Posicion;
 import pista.Pista;
 import pista.PistaSimple;
 

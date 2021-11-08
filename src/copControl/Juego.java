@@ -121,9 +121,9 @@ public class Juego extends Observable implements ObjetoVivo {
 	
 	//llamar en hilo de gameLoop por un timer con tiempo=nivel->dificultad->velocidadDeAparicion
 	public void colocarAvion() {
-		
+		System.out.println("cantidad de ciclos "+ this.cantidadDeCiclos());
 		if(this.nivelActual.getFrecuenciaDeAparicionDeNuevoAvion()<= this.cantidadDeCiclos()){
-			
+			System.out.println("nuevo avion");
 			boolean tienePistaAdecuada= false;
 			while (!tienePistaAdecuada){
 				
@@ -211,6 +211,7 @@ public class Juego extends Observable implements ObjetoVivo {
 		}
 		this.pasoUnCiclo();
 		notificarObservadores();
+		System.out.println("intervalo "+this.intervaloEntreNuevoAvion);
 		
 	}
 	private void pasoUnCiclo() {
