@@ -121,9 +121,9 @@ public class Juego extends Observable implements ObjetoVivo {
 	
 	//llamar en hilo de gameLoop por un timer con tiempo=nivel->dificultad->velocidadDeAparicion
 	public void colocarAvion() {
-		System.out.println("cantidad de ciclos "+ this.cantidadDeCiclos());
+
 		if(this.nivelActual.getFrecuenciaDeAparicionDeNuevoAvion()<= this.cantidadDeCiclos()){
-			System.out.println("nuevo avion");
+
 			boolean tienePistaAdecuada= false;
 			while (!tienePistaAdecuada){
 				
@@ -161,26 +161,32 @@ public class Juego extends Observable implements ObjetoVivo {
 			this.estaGanado=true;
 			this.jugandose=false;
 			System.out.println("Nivel Y Juego Ganado!!!!!!!!!!!!!!");
+			System.out.println("esta ganado = "+ this.estaGanado);
 		}
 	}
-	
+
 	private boolean esUltimoNivel(){
 		//el primer numero de nivel es el nivel 0
+
 		int numeroDeNivelActual = this.niveles.indexOf(nivelActual);
+		boolean bol = numeroDeNivelActual==this.niveles.size()-1;
+		System.out.println("es ultimo nivel "+ bol);
 		return (numeroDeNivelActual==this.niveles.size()-1);
 	}
 	
 	public boolean esJuegoGanado(){
-
+		System.out.println("validaddor juego ganado "+ this.estaGanado);
 		Iterator<Nivel> nivelIt= this.niveles.iterator();
 		while(nivelIt.hasNext() && this.estaGanado){
 			Nivel nivel= nivelIt.next();
 			this.estaGanado=nivel.estaGanado();
+			System.out.println("validaddor juego ganado2 "+ this.estaGanado);
 		}
 		
 		if( this.estaGanado){			
 			this.jugandose=false;
 		}
+
 		return this.estaGanado;
 	}
 	
