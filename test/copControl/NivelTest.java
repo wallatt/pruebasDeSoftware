@@ -58,12 +58,11 @@ public class NivelTest {
     }
 
     @Test
-    public void aterrizanDosAvionesEnPosicion() {
+    public void aterrizanUnAvionEnPosicion() {
         mapa.colocarAvionEnAire(avionUno);
-        mapa.colocarAvionEnAire(avionDos);
         mapa.colocarAvionEnAire(avionTres);
         int cantidadAvionesAterrizados = nivel.aterrizarAviones();
-        assertTrue(cantidadAvionesAterrizados == 2);
+        assertTrue(cantidadAvionesAterrizados == 1);
     }
    
 
