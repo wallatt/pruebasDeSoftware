@@ -14,7 +14,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class JuegoTest {
+public class JuegoTestIntegracion {
     Nivel nivelActual;
     Nivel nivelSiguiente;
     Pista pista,pista2;

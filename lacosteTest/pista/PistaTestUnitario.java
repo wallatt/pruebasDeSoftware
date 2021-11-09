@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 
 
-public class PistaTest {
+public class PistaTestUnitario {
     Avion avion;
     Mapa mapa;
     Pista pista;

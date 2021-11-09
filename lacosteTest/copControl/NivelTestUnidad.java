@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class NivelTest {
+public class NivelTestUnidad {
     Avion avionUno,avionDos,avionTres;
     Mapa mapa;
     Pista pista;
